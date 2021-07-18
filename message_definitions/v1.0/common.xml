@@ -5158,7 +5158,7 @@
     <message id="93" name="HIL_ACTUATOR_CONTROLS">
       <description>Sent from autopilot to simulation. Hardware in the loop control outputs (replacement for HIL_CONTROLS)</description>
       <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude of the number.</field>
-      <field type="float[16]" name="controls">Control outputs -1 .. 1. Channel assignment depends on the simulated hardware.</field>
+      <field type="float[20]" name="controls">Control outputs -1 .. 1. Channel assignment depends on the simulated hardware.</field>
       <field type="uint8_t" name="mode" enum="MAV_MODE_FLAG" display="bitmask">System mode. Includes arming state.</field>
       <field type="uint64_t" name="flags" display="bitmask">Flags as bitfield, 1: indicate simulation using lockstep.</field>
     </message>
